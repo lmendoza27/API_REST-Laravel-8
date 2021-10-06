@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\BookController;
+use App\Http\Controllers\Api\DragonballController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -27,3 +28,8 @@ Route::post('crear', [BookController::class, 'createBook']);
 Route::put('books/{id}', 'Api\BookController@updateBook');
 
 Route::delete('borrar/{id}', [BookController::class, 'deleteBook']);
+
+
+Route::get('mirar', [DragonballController::class, 'getAll']);
+
+Route::post('agregar', [DragonballController::class, 'createCharacter']);
