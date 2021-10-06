@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Dragonball;
+use DB;
 
 class DragonballController extends Controller
 {
@@ -13,6 +14,14 @@ class DragonballController extends Controller
         $ball = Dragonball::all();
         return response($ball, 200);
       }
+
+    public function getRanking() {
+        $ball = DB::table('Dragonballs')
+        ->orderBy('power','desc')
+        ->get();
+        return response($ball, 200);
+    }
+
       public function createCharacter(Request $request) {
         $book = new Dragonball;
         $book->name = $request->name;

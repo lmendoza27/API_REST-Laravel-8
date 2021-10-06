@@ -2286,7 +2286,8 @@ __webpack_require__.r(__webpack_exports__);
     getProducts: function getProducts() {
       var _this = this;
 
-      this.axios.get('http://127.0.0.1:8000/api/mirar').then(function (response) {
+      //this.axios.get('http://127.0.0.1:8000/api/mirar')
+      this.axios.get('http://127.0.0.1:8000/api/ranking').then(function (response) {
         _this.products = response.data;
       });
     },

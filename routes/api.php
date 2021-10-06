@@ -32,6 +32,8 @@ Route::delete('borrar/{id}', [BookController::class, 'deleteBook']);
 
 Route::get('mirar', [DragonballController::class, 'getAll']);
 
+Route::get('ranking', [DragonballController::class, 'getRanking']);
+
 Route::post('agregar', [DragonballController::class, 'createCharacter']);
 
 Route::delete('borrado/{id}', [DragonballController::class, 'destruir']);
