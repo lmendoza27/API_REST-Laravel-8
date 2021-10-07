@@ -1,6 +1,7 @@
 import ProductIndex from './components/products/index.vue';
 import ProductCreate from './components/products/create.vue';
 import ProductEdit from './components/products/edit.vue';
+import ProductPower from './components/products/power.vue';
 
 export const routes = [
     {
@@ -17,5 +18,10 @@ export const routes = [
         path: '/products/edit/:id',
         component: ProductEdit,
         name: "ProductEdit"
+    },
+    {
+        path: '/products/power',
+        component: ProductPower,
+        name: "ProductPower"
     }
 ];

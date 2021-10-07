@@ -75,5 +75,11 @@ class DragonballController extends Controller
           return response()->json($product);
       }
 
+      public function onethousandpower() {
+          $ball = Dragonball::where('power','>=','1000')->get();
+          //$ball = Dragonball::all();
+          return response($ball, 200);
+      }
+
 
 }

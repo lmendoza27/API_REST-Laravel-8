@@ -34,6 +34,8 @@ Route::get('mirar', [DragonballController::class, 'getAll']);
 
 Route::get('ranking', [DragonballController::class, 'getRanking']);
 
+Route::get('power', [DragonballController::class, 'onethousandpower']);
+
 Route::post('agregar', [DragonballController::class, 'createCharacter']);
 
 Route::delete('borrado/{id}', [DragonballController::class, 'destruir']);
