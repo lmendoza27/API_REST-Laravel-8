@@ -2,6 +2,7 @@ import ProductIndex from './components/products/index.vue';
 import ProductCreate from './components/products/create.vue';
 import ProductEdit from './components/products/edit.vue';
 import ProductPower from './components/products/power.vue';
+import WrestlingIndex from './components/wrestling/index.vue';
 
 export const routes = [
     {
@@ -23,5 +24,10 @@ export const routes = [
         path: '/products/power',
         component: ProductPower,
         name: "ProductPower"
+    },
+    {
+        path: '/wrestling',
+        component: WrestlingIndex,
+        name: "WrestlingIndex"
     }
 ];

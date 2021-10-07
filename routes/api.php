@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\BookController;
 use App\Http\Controllers\Api\DragonballController;
+use App\Http\Controllers\FileController;
+use App\Http\Controllers\Api\WrestlingController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,6 +22,8 @@ use App\Http\Controllers\Api\DragonballController;
 //});
 //Route::get('books', 'Api\BookController@getAllBooks');
 
+///// MIS PRIMEROS PASOS
+
 Route::get('books', [BookController::class, 'getAllBooks']);
 
 Route::get('ver/{id}', [BookController::class, 'getBook']);
@@ -29,6 +33,7 @@ Route::put('books/{id}', 'Api\BookController@updateBook');
 
 Route::delete('borrar/{id}', [BookController::class, 'deleteBook']);
 
+////// CREACIÓN CON VUEJS DENTRO DE LARAVEL PARA EL CONSUMO
 
 Route::get('mirar', [DragonballController::class, 'getAll']);
 
@@ -43,3 +48,13 @@ Route::delete('borrado/{id}', [DragonballController::class, 'destruir']);
 Route::patch('update/{id}', [DragonballController::class, 'actualizar']);
 
 Route::get('personaje/{id}', [DragonballController::class, 'show']);
+
+////// SUBIR ARCHIVOS
+
+Route::post('uplo', [FileController::class, 'testeo']);
+
+Route::post('upload', [FileController::class, 'upload']);
+
+Route::post('luchar', [WrestlingController::class, 'create']);
+
+Route::get('ring', [WrestlingController::class, 'getAll']);

@@ -2,13 +2,18 @@
     <div class="container">
         <h2 class="text-center">Lista de Personajes</h2>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <router-link :to="{ name: 'ProductPower' }" class="btn btn-warning btn-sm float-left mb-2">Power + 1000</router-link>
             </div>
-          <div class="col-md-6">
-                <router-link :to="{ name: 'ProductCreate' }" class="btn btn-primary btn-sm float-right mb-2">Agregar Personaje</router-link>
+        <div class="col-md-12">
+                <router-link :to="{ name: 'WrestlingIndex' }" class="btn btn-dark btn-sm float-left mb-2">Wrestling</router-link>
             </div>
-        </div>
+              </div>
+<div class="row">
+          <div class="col-md-6">
+                <router-link :to="{ name: 'ProductCreate' }" class="btn btn-primary btn-sm float-left mb-2">Agregar Personaje</router-link>
+            </div>
+</div>      
         <div class="row">
             <div class="col-md-12">
                 <table class="table">
