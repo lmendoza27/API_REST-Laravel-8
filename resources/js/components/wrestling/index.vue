@@ -6,9 +6,11 @@
 <ul class="flex-containers">
   <li class="flex-item" v-for="wrestler in wrestlers" :key="wrestler.id">
 
-    <img :src="'http://127.0.0.1:8000/storage/' + wrestler.image"> <br>
+    <img :src="'../storage/' + wrestler.image" width="100%" height="120px" class="imgwrestler" > <br>
+    <img :src="'../storage/dados.png'" width="15px" height="12px">
    <span class="nombre"> {{ wrestler.name }} </span> <br>
-   <span class="power"> <b>Poder:</b> {{ wrestler.power }} </span>
+   <span class="power"> <b>Poder:</b> {{ wrestler.power }} </span> <br>
+    <span class="power"> <b>Compañía:</b> {{ wrestler.company }} </span>
    <img src=""/>
   </li>
 
@@ -73,15 +75,17 @@ export default {
   justify-content: space-around;
   
   padding: 0;
-  margin: 0;
+  /* Arriba | Derecha | Abajo | Izquierda */
+  margin: 50px 0 0 0;
   list-style: none;
 }
 
 .flex-item {
   background: tomato;
   padding:  0px;
-  width: 200px;
-  height: 150px;
+  width: 150px;
+  /*height: 150px;*/
+  height: 200px;
   margin-top: 10px;
   /*line-height: 150px;*/
   color: white;
@@ -96,6 +100,11 @@ export default {
     /*vertical-align: bottom;*/
     /*bottom: 0px;*/
     /*vertical-align: sub;*/
+}
+
+.imgwrestler {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
 }
 
 </style>

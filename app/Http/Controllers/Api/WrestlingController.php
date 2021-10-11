@@ -13,7 +13,9 @@ class WrestlingController extends Controller
         $book = new Wrestling;
         $book->name = $request->name;
         $book->power = $request->power;
-        $book->image = $request->file('image')->store('Wrestling');
+        //$book->image = $request->file('image')->store('Wrestling');
+        //$book->image = $request->file('image')->store('public/Wrestling');
+        $book->image = $request->file('image')->store('Wrestling', 'public');
         $book->company = $request->company;
         $book->save();
   

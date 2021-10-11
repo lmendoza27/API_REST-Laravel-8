@@ -2417,6 +2417,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -7031,7 +7033,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.container[data-v-63e3b709] {\n    padding-top: 20px;\n    padding-bottom: 60px;\n    padding-left: 20px;\n    padding-right: 20px;\n    background-color: black;\n    width: 100%;\n    border-radius: 15px;\n}\n.title[data-v-63e3b709] {\n    color: white;\n    font-size: 20px;\n    padding: 20px;\n}\n.flex-containers[data-v-63e3b709] {\n  /* We first create a flex layout context */\n  display: flex;\n  \n  /* Then we define the flow direction \n     and if we allow the items to wrap \n   * Remember this is the same as:\n   * flex-direction: row;\n   * flex-wrap: wrap;\n   */\n  flex-flow: row wrap;\n  \n  /* Then we define how is distributed the remaining space */\n  justify-content: space-around;\n  \n  padding: 0;\n  margin: 0;\n  list-style: none;\n}\n.flex-item[data-v-63e3b709] {\n  background: tomato;\n  padding:  0px;\n  width: 200px;\n  height: 150px;\n  margin-top: 10px;\n  /*line-height: 150px;*/\n  color: white;\n  font-weight: bold;\n  /*font-size: 3em;*/\n  text-align: center;\n  border-radius: 20px;\n}\n.nombre[data-v-63e3b709] {\n    font-size: 1em;\n    /*vertical-align: bottom;*/\n    /*bottom: 0px;*/\n    /*vertical-align: sub;*/\n}\n\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.container[data-v-63e3b709] {\n    padding-top: 20px;\n    padding-bottom: 60px;\n    padding-left: 20px;\n    padding-right: 20px;\n    background-color: black;\n    width: 100%;\n    border-radius: 15px;\n}\n.title[data-v-63e3b709] {\n    color: white;\n    font-size: 20px;\n    padding: 20px;\n}\n.flex-containers[data-v-63e3b709] {\n  /* We first create a flex layout context */\n  display: flex;\n  \n  /* Then we define the flow direction \n     and if we allow the items to wrap \n   * Remember this is the same as:\n   * flex-direction: row;\n   * flex-wrap: wrap;\n   */\n  flex-flow: row wrap;\n  \n  /* Then we define how is distributed the remaining space */\n  justify-content: space-around;\n  \n  padding: 0;\n  /* Arriba | Derecha | Abajo | Izquierda */\n  margin: 50px 0 0 0;\n  list-style: none;\n}\n.flex-item[data-v-63e3b709] {\n  background: tomato;\n  padding:  0px;\n  width: 150px;\n  /*height: 150px;*/\n  height: 200px;\n  margin-top: 10px;\n  /*line-height: 150px;*/\n  color: white;\n  font-weight: bold;\n  /*font-size: 3em;*/\n  text-align: center;\n  border-radius: 20px;\n}\n.nombre[data-v-63e3b709] {\n    font-size: 1em;\n    /*vertical-align: bottom;*/\n    /*bottom: 0px;*/\n    /*vertical-align: sub;*/\n}\n.imgwrestler[data-v-63e3b709] {\n  border-top-left-radius: 16px;\n  border-top-right-radius: 16px;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -39450,10 +39452,23 @@ var render = function() {
       _vm._l(_vm.wrestlers, function(wrestler) {
         return _c("li", { key: wrestler.id, staticClass: "flex-item" }, [
           _c("img", {
-            attrs: { src: "http://127.0.0.1:8000/storage/" + wrestler.image }
+            staticClass: "imgwrestler",
+            attrs: {
+              src: "../storage/" + wrestler.image,
+              width: "100%",
+              height: "120px"
+            }
           }),
           _vm._v(" "),
           _c("br"),
+          _vm._v(" "),
+          _c("img", {
+            attrs: {
+              src: "../storage/dados.png",
+              width: "15px",
+              height: "12px"
+            }
+          }),
           _vm._v(" "),
           _c("span", { staticClass: "nombre" }, [
             _vm._v(" " + _vm._s(wrestler.name) + " ")
@@ -39464,6 +39479,13 @@ var render = function() {
           _c("span", { staticClass: "power" }, [
             _c("b", [_vm._v("Poder:")]),
             _vm._v(" " + _vm._s(wrestler.power) + " ")
+          ]),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
+          _c("span", { staticClass: "power" }, [
+            _c("b", [_vm._v("Compañía:")]),
+            _vm._v(" " + _vm._s(wrestler.company) + " ")
           ]),
           _vm._v(" "),
           _c("img", { attrs: { src: "" } })
