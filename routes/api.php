@@ -55,6 +55,12 @@ Route::post('uplo', [FileController::class, 'testeo']);
 
 Route::post('upload', [FileController::class, 'upload']);
 
+Route::post('upload_resize', [FileController::class, 'upload3']);
+
+Route::post('upload_baw', [FileController::class, 'upload4']);
+
+Route::post('upload_valid', [FileController::class, 'upload5']);
+
 Route::post('luchar', [WrestlingController::class, 'create']);
 
 Route::get('ring', [WrestlingController::class, 'getAll']);

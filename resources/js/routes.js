@@ -3,6 +3,8 @@ import ProductCreate from './components/products/create.vue';
 import ProductEdit from './components/products/edit.vue';
 import ProductPower from './components/products/power.vue';
 import WrestlingIndex from './components/wrestling/index.vue';
+import NewWrestler from './components/wrestling/create.vue';
+import FileTest from './components/test/index.vue';
 
 export const routes = [
     {
@@ -29,5 +31,15 @@ export const routes = [
         path: '/wrestling',
         component: WrestlingIndex,
         name: "WrestlingIndex"
+    },
+    {
+        path: '/wrestling/create',
+        component: NewWrestler,
+        name: "NewWrestler"
+    },
+    {
+        path: '/test',
+        component: FileTest,
+        name: "FileTest"
     }
 ];

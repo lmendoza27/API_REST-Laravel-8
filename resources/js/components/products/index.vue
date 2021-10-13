@@ -10,8 +10,11 @@
             </div>
               </div>
 <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
                 <router-link :to="{ name: 'ProductCreate' }" class="btn btn-primary btn-sm float-left mb-2">Agregar Personaje</router-link>
+            </div>
+                      <div class="col-md-12">
+                <router-link :to="{ name: 'FileTest' }" class="btn btn-light btn-sm float-left mb-2 border-dark">Testing de Subir Imagen a Laravel</router-link>
             </div>
 </div>      
         <div class="row">

@@ -1,7 +1,14 @@
 <template>
- <div class="container">
 
+ <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <router-link :to="{ name: 'NewWrestler' }" class="btn btn-warning btn-sm float-left ml-3 mb-2">Crear Wrestler</router-link>
+            </div>
+              </div>
 <b class="title"> Lista de Wrestlers </b>
+
+
 
 <ul class="flex-containers">
   <li class="flex-item" v-for="wrestler in wrestlers" :key="wrestler.id">
